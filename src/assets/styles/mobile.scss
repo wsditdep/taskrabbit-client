@@ -1,0 +1,2066 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
+
+$primary-color: #254f17;
+$primary-color-light: #51af33;
+$white-color: #fff;
+$white-color-dd: #c9c9c9;
+$white-color-ddd: #5d5d5d;
+$light-black: #1b1b1b;
+
+.mt2 {
+    margin-top: 0.2rem;
+}
+
+$color-gray-main: #ECF1F0;
+$color-green-main: #0D7A5F;
+$color-gray-text-lines: #E5E5E5;
+$color-gray-green-home-main: #F6FCF3;
+
+.mt4 {
+    margin-top: 0.4rem;
+}
+
+.mt8 {
+    margin-top: 0.8rem;
+}
+
+.ml2 {
+    margin-left: 0.2rem;
+}
+
+.ml4 {
+    margin-left: 0.4rem;
+}
+
+.mr4 {
+    margin-right: 0.4rem;
+}
+
+.mr8 {
+    margin-right: 0.8rem;
+}
+
+.background_texture {
+    background: rgba(0, 255, 255, 0.062);
+    background: url("../images/redzy/bg-texture.png") #F8fff0 no-repeat center bottom;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    min-height: 100%;
+}
+
+.video-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    video {
+        height: auto;
+        width: 90%;
+        border-radius: 0.4rem;
+    }
+}
+
+.document-page {
+    padding: 2rem 0;
+}
+
+.downloadApp {
+    color: $light-black;
+}
+.download-app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0rem 3rem;
+
+    &:hover {
+        color: $primary-color;
+    }
+    img {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 1rem;
+    }
+    p {
+        font-size: 1.2rem;
+        margin-left: 1rem;
+        font-weight: 600;
+    }
+}
+
+.static-text-info {
+    li {
+        color: $light-black;
+        list-style-type: none;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 3rem 1rem;
+    }
+}
+
+.credit-score {
+    ul {
+        display: flex;
+        margin: 1rem 0;
+        border: 1px solid #e1e1e1;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background: $white-color;
+
+        li {
+            list-style-type: none;
+            margin-right: 1rem;
+
+            i {
+                color: #c8c8c8;
+                font-size: 1.2rem;
+            }
+
+            .heart-active {
+                color: rgb(225, 0, 0);
+            }
+        }
+    }
+}
+
+.show-rewards {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.703);
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .show-rewards-inner {
+        background: $white-color;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        text-align: center;
+
+        h3 {
+            padding: 1rem 0;
+            font-size: 1.4rem;
+            color: $primary-color;
+        }
+
+        img {
+            height: auto;
+            width: 40%;
+        }
+
+        button {
+            width: 100%;
+            background: $primary-color;
+            color: $white-color;
+            outline: none;
+            border: none;
+            padding: 0.4rem 0.6rem;
+            border-radius: 0.4rem;
+        }
+    }
+}
+
+.become-tasker {
+    text-align: center;
+    cursor: pointer;
+
+    img {
+        height: auto;
+        width: 12rem;
+    }
+}
+
+.bottom_nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0.2rem;
+    background: #f8f8f8;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    min-width: 750px;
+    box-shadow: 0 0 0.6rem 0 #00000035;
+
+    .bottom_nav_childs {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i {
+            font-size: 2.6rem;
+            cursor: pointer;
+        }
+
+        .bottom_nav_logo {
+            height: 8rem;
+            width: 8rem;
+            background: $white-color;
+            border-radius: 100%;
+            box-shadow: 0 0 1rem 0 #00000035;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: -3.8rem;
+            cursor: pointer;
+
+            img {
+                height: auto;
+                width: 90%;
+            }
+        }
+    }
+}
+
+.note {
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-top: 1rem;
+}
+
+.copy-btn {
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: $primary-color;
+}
+
+.mobile-section-padding {
+    padding: 2rem 2rem !important;
+}
+
+.global-btn {
+    outline: none;
+    border: none;
+    color: $white-color;
+    font-weight: 500;
+    font-size: 1.4rem;
+    width: 100%;
+    display: block;
+    border-radius: 1rem;
+    padding: 0.6rem 0;
+    border: 2px solid transparent;
+}
+
+.global-btn-primary {
+    background: $primary-color-light;
+}
+
+.global-btn-secondary {
+    background: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+}
+
+.mobile-form {
+    form {
+        .mobile-form-group {
+            position: relative;
+
+            i {
+                position: absolute;
+                top: 1.4rem;
+                left: 1.4rem;
+                font-size: 1.6rem;
+                width: 1rem;
+                color: $primary-color;
+                opacity: 0.8;
+            }
+
+            input {
+                width: 100%;
+                margin-bottom: 2rem;
+                border-radius: 1rem;
+                outline: none;
+                border: 2px solid $primary-color-light;
+                padding: 1rem 2rem 1rem 5rem;
+                font-size: 1.4rem;
+                background: $white-color;
+
+                &::placeholder {
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+.home-images-slider {
+    animation: animateMySlider 50s linear infinite;
+}
+
+@keyframes animateMySlider {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-400%);
+    }
+}
+
+.normal_withdrawal_pin_input {
+    input {
+        border: 2px solid $primary-color !important;
+        border-radius: 0.5rem !important;
+        margin-top: 1rem !important;
+
+        &::placeholder {
+            font-size: 1.5rem !important;
+        }
+    }
+}
+
+.app-main-section {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    span,
+    input,
+    select,
+    p {
+        font-family: 'Roboto', sans-serif !important;
+    }
+
+
+    display: flex;
+    justify-content: center;
+    background: #f8f8f8;
+
+    .app-inner-view {
+        background: $color-gray-main;
+        width: 750px;
+        height: 100vh;
+        overflow-y: scroll;
+        position: relative;
+
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: rgb(255, 255, 255);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: rgb(220, 220, 220);
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+        }
+
+    }
+}
+
+.reviews-wrapper {
+    padding: 2rem 2.5rem 12rem 2.5rem;
+
+    ul {
+        li {
+            display: flex;
+            align-items: center;
+            background: $white-color;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #d7d7d7;
+            margin: 1rem 0;
+            animation: fadeRightAnimation 1s ease-in forwards;
+
+            @keyframes fadeRightAnimation {
+                from {
+                    transform: translateX(12rem);
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateX(0rem);
+                }
+            }
+
+            .reviewer-image {
+                margin-right: 1rem;
+
+                img {
+                    height: 3.5rem;
+                    width: 3.5rem;
+                    border-radius: 50%;
+                }
+            }
+
+            .reviewer-details {
+                .reviewer-name {
+                    display: flex;
+                    align-items: center;
+
+                    ol {
+                        padding-left: 0.5rem;
+
+                        i {
+                            color: orange;
+                            margin-right: 0.2rem;
+                            font-size: 0.9rem;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 1.1rem;
+                        font-weight: 600;
+                    }
+
+                }
+
+                p {
+                    font-size: 1rem;
+                }
+
+                h5 {
+                    font-size: 0.9rem;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+.welcome-page-section {
+    background: $white-color;
+    height: 100vh;
+
+    .welcome-logo {
+        height: 30rem;
+        // background: $primary-color;
+        // border-radius: 0 0 50% 50%;
+        position: relative;
+        background: url("../images/redzy/make_money.jpg");
+        background-size: contain;
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+        box-shadow: 0 0 1rem 0 #00000020;
+
+        img {
+            height: auto;
+            width: 10rem;
+            background: #ffffff;
+            border-radius: 50%;
+            padding: 1rem;
+            position: absolute;
+            top: 94%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0rem 0rem 1rem 0.4rem #00000021;
+        }
+    }
+
+    .welcome-details {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 10rem 0 7rem 0;
+
+        img {
+            height: auto;
+            width: 60%;
+        }
+
+        p {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: $light-black;
+            margin-top: 1rem;
+        }
+    }
+
+    .welcome-page-animation {
+        display: flex;
+        justify-content: center;
+        margin-top: -1rem;
+
+        img {
+            height: auto;
+            width: 90%;
+        }
+    }
+
+    .welcome-navigate-btns {
+        padding: 3rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: -3rem;
+    }
+}
+
+.mobile-auth-section {
+    padding: 2rem 4rem;
+
+    .auth-logo {
+        text-align: center;
+
+        img {
+            height: auto;
+            width: 50%;
+        }
+    }
+
+    .task_name {
+        h1 {
+            background: $primary-color;
+            display: inline-block;
+            padding: 3rem 1rem 0.2rem 1rem;
+            border-radius: 1.2rem;
+            color: $white-color;
+            font-size: 2.4rem;
+            margin-top: 10rem;
+        }
+    }
+
+    .tab-wrapper {
+        margin: 4rem 0;
+
+        h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+
+            span {
+                opacity: 0.5;
+                cursor: pointer;
+            }
+
+            .separate {
+                margin: 0rem 0.8rem;
+            }
+
+            .active {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.section-breadcrumb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 0rem;
+
+    .childs {
+        &:first-child {
+            i {
+                font-size: 2rem;
+                color: $primary-color;
+            }
+        }
+
+        &:nth-child(2) {
+            h3 {
+                font-size: 2.2rem;
+                font-weight: 600;
+                color: $primary-color;
+            }
+        }
+
+        &:last-child {
+            .logout-btn {
+                height: 3.3rem;
+                width: 3.3rem;
+                background: $primary-color;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                i {
+                    color: $white-color;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+.user-profile-section {
+    padding: 3rem 0;
+
+    .user-profile-details {
+        padding: 3rem 2rem;
+        background: url("../images/redzy/bg_text.png");
+        background-repeat: no-repeat;
+        box-shadow: 0 0.2rem 0.5rem 0 #d3d3d3a7;
+        border-radius: 2rem;
+        margin-top: 4rem;
+        background-size: 100% 100%;
+
+        .user-profile-details-parent {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .user-profile-details-childs {
+                position: relative;
+
+                .profile-text-icon {
+                    background: rgb(174, 228, 246);
+                    height: 6rem;
+                    width: 6rem;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 2px solid white;
+                    box-shadow: 0 0.2rem 0.5rem 0 #d3d3d3a7;
+
+                    h3 {
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        color: $primary-color;
+                    }
+                }
+
+                &:first-child {
+                    flex: 1;
+
+                    img {
+                        height: auto;
+                        width: 8rem;
+                    }
+                }
+
+                &:last-child {
+                    flex: 3;
+                }
+
+            }
+
+            .user-profile-inner-details {
+                display: flex;
+
+                .user-profile-inner-details-childs {
+                    flex: 1;
+                }
+            }
+        }
+
+        .profile-line-break {
+            height: 2px;
+            width: 100%;
+            background: $primary-color;
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
+
+        .user-account-balance {
+            display: flex;
+            justify-content: space-between;
+
+            h3 {
+                font-weight: 400;
+                color: $white-color-ddd;
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-weight: 600;
+                color: #4e4e4e;
+                font-size: 2.4rem;
+            }
+        }
+
+    }
+
+    .user-profile-subnav {
+
+        margin-bottom: 10rem;
+
+        ul {
+            li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 2px solid $light-black;
+                padding-bottom: 2rem;
+                margin-bottom: 2rem;
+                cursor: pointer;
+
+                h2 {
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    color: $primary-color;
+                }
+
+                i {
+                    font-size: 1.2rem;
+                    color: $primary-color-light;
+                }
+            }
+        }
+    }
+}
+
+.sub-heading {
+    font-weight: 500;
+    color: rgb(23, 23, 23);
+    font-size: 1.4rem;
+}
+
+.heading {
+    font-weight: 400;
+    color: $light-black;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.heading-lg {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 3rem 0;
+}
+
+.heading-md {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.user-journey-section {
+    .journey-wrapper {
+        display: flex;
+        align-items: center;
+        margin: 4rem 0;
+
+        .journey-wrapper-childs {
+            &:first-child {
+                margin-right: 1rem;
+
+                img {
+                    height: auto;
+                    width: 8rem;
+                }
+            }
+
+            &:last-child {
+                h2 {
+                    color: $white-color-ddd;
+
+                }
+            }
+        }
+    }
+
+    .journey-info {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        .earning-plan {
+            background: $white-color;
+            padding: 2rem;
+            border-radius: 1rem;
+            height: 100%;
+
+            h1 {
+                font-size: 1.6rem;
+                font-weight: 600;
+
+                i {
+                    background-color: #eaeaea;
+                    padding: 0.6rem;
+                    font-size: 1rem;
+                    border-radius: 0.4rem;
+                }
+            }
+        }
+
+        .user-journey-progress-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+
+            .progress-circle-wrapper {
+                height: 13rem;
+                width: 13rem;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .progress-circle-inner-wrapper {
+                    background: $white-color;
+                    border-radius: 100%;
+                    height: 9rem;
+                    width: 9rem;
+                    display: flex;
+                    justify-content: center;
+
+                    h3 {
+                        margin-top: 2rem;
+                        font-size: 1.6rem;
+                        color: $white-color-ddd;
+                        font-weight: 400;
+                    }
+                }
+            }
+
+        }
+
+        .progress-info {
+            background-color: $white-color;
+            margin-top: -6.5rem;
+            position: relative;
+            padding-top: 1rem;
+            padding-bottom: 1.4rem;
+
+            h3 {
+                font-size: 1.6rem;
+                color: $white-color-ddd;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 1.5rem;
+                color: $white-color-ddd;
+                font-weight: 400;
+            }
+        }
+
+        .journey-info-childs {
+            flex: 1;
+            text-align: center;
+
+            .journey-info-inner-childs {
+                &:first-child {
+                    background: $white-color;
+                    padding: 2rem;
+                    border-radius: 1rem;
+
+                    h3 {
+                        i {
+                            background-color: #eaeaea;
+                            padding: 0.6rem;
+                            font-size: 1rem;
+                            border-radius: 0.4rem;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    display: flex;
+                    gap: 0.8rem;
+
+                    .journey-info-inner-childs-alt {
+                        border-radius: 1rem;
+                        background: $white-color;
+                        flex: 1;
+                        margin-top: 0.8rem;
+                        padding: 1.8rem 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .journey-history-wrapper {
+        ul {
+            li {
+                list-style-type: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: $white-color;
+                padding: 1rem;
+                border-radius: 0.5rem;
+                box-shadow: 0 0.2rem 0.3rem 0 #1b1b1b2a;
+                margin-bottom: 1.5rem;
+
+                .journey-history-list {
+                    margin-right: 0.7rem;
+
+                    img {
+                        height: 3.4rem;
+                        width: 3.4rem;
+                        border: 3px solid #d9d9d9;
+                        border-radius: 50%;
+                    }
+                }
+
+                .journey-history-list-title {
+                    flex: 1;
+
+                    p {
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        color: black;
+                    }
+                }
+
+                .journey-history-list-amount {
+                    h3 {
+                        font-size: 1.8rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    .start-journey-btn {
+        margin-top: 4rem;
+        padding-bottom: 10rem;
+    }
+}
+
+
+// start page section
+
+.slider-container {
+    background-color: $color-gray-main;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../images/redzy/landingSlider1.png);
+    min-width: 100%;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.slide2 {
+    background-image: url(../images/redzy/landingSlider2.png);
+}
+
+.slide3 {
+    background-image: url(../images/redzy/landingSlider3.png);
+}
+
+.slide>div {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.slide-main-text {
+    font-style: bold;
+    font-weight: 200;
+    font-size: 28px;
+    word-break: keep-all;
+    box-sizing: border-box;
+    margin-top: 15rem;
+}
+
+.slide-secound-text {
+    width: 100%;
+    font-size: 28px;
+    margin-top: 3rem;
+}
+
+.getStartBtn {
+    position: absolute;
+    bottom: 5rem;
+    width: 80%;
+    font-weight: 700;
+    font-size: 22px;
+    height: 4rem;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 12rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* Active dot */
+.dot.active {
+    background-color: $primary-color;
+}
+
+// home page
+
+.home-page-section {
+    background-color: $color-gray-green-home-main;
+    height: 100vh;
+}
+
+.homeBody {
+    background-color: $color-gray-green-home-main;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.head-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 2rem;
+    align-items: center;
+}
+
+.logo {
+    img {
+        height: auto;
+        width: 50%;
+    }
+}
+
+.main-logo {
+    height: auto;
+    width: 4.6rem;
+}
+
+.main-logo-alt {
+    height: auto;
+    width: 14rem;
+    margin-left: 0.8rem;
+}
+
+.profileLogo {
+    margin-right: 2rem;
+
+    i {
+        font-size: 26px;
+        border: 1px solid;
+        padding: 0.5rem;
+        height: 3rem;
+        width: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        aspect-ratio: 1;
+        color: #fff;
+        background-color: $primary-color;
+
+    }
+}
+
+.banner {
+    width: 100%;
+}
+
+.home-main-text {
+    box-sizing: border-box;
+    padding: 2rem 2rem 1rem 2rem;
+}
+
+.home-main-text>h2 {
+    font-weight: 700;
+    font-size: 38px;
+}
+
+.home-secound-text {
+    width: 100%;
+    font-size: 32px;
+    margin: 2rem;
+}
+
+.split {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 0rem 2rem;
+
+    div {
+        &:first-child {
+            height: auto;
+            width: 6rem;
+        }
+
+        &:last-child {
+            overflow: hidden;
+
+            p {
+                animation: run-text 10s linear infinite;
+                font-size: 1.4rem;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+@keyframes run-text {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.split>div {
+    background-color: $color-gray-main;
+    padding-left: 2rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+
+.home-slider {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    justify-content: center;
+}
+
+.home-images-slider {
+    display: flex;
+    margin-top: 2rem;
+    // padding-left: 2rem;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.carousel {
+    overflow: hidden;
+    cursor: grab;
+}
+
+.home-images-slider>div {
+    min-height: 20rem;
+    min-width: 30rem;
+    width: 80%;
+}
+
+.home-images-slider>div>img {
+    margin-left: 3rem;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+
+// end home page
+
+// withdrawal page
+
+.user-withdrawal-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position-y: -20%;
+    background-repeat: no-repeat;
+    background-color: #F5FBF1;
+    padding-bottom: 10rem;
+
+    .backgroundImg {
+        background-color: $primary-color;
+        width: 100%;
+        border-radius: 0 0 50% 50%;
+        position: relative;
+        height: 25rem;
+    }
+
+    .withdrawal-page-header {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .withdrawal-page-header>span {
+        font-size: 38px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .pageDes {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .pageDes>span {
+        font-size: 36px;
+        text-align: center;
+        margin-top: 3rem;
+        color: #fff;
+        font-weight: 800;
+    }
+
+    .cards {
+        margin-top: -10rem;
+        background-color: #fff;
+        height: 55rem;
+        width: 100%;
+        max-width: 40rem;
+        border-radius: 60px;
+        box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.8);
+        position: relative;
+        padding-top: 3rem;
+    }
+
+    .withdrawalLogo,
+    .withdrawalName,
+    .accountBalance {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .accountBalance {
+        margin: 0;
+        font-size: 28px;
+        color: #000;
+        opacity: 0.8;
+    }
+
+    .withdrawalLogo>img {
+        width: 10rem;
+    }
+
+    .withdrawalLogo,
+    .withdrawalName>span {
+        color: #000;
+        font-size: 44px;
+        font-weight: 1000;
+    }
+
+    .usdtAmount {
+        margin-top: 1rem;
+    }
+
+    .usdtAmount>span {
+        font-size: 34px;
+        opacity: 0.6;
+
+    }
+
+    .withdrawalName {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .withdrawalName>input {
+        border-style: solid;
+        border-width: 0 0 1px 0;
+        width: 90%;
+        height: 3rem;
+        margin-top: 10px;
+        border-color: $color-gray-text-lines;
+        text-align: center;
+        color: #000;
+        outline: none;
+        font-size: 26px;
+    }
+
+    .withdrawalName>input::placeholder {
+        color: #000;
+        font-size: 28px;
+        opacity: 0.6;
+    }
+
+    .withdrawalAmount {
+        margin-top: 0;
+    }
+
+    .radio-button-container {
+        width: 90%;
+        margin-left: 5%;
+        display: flex;
+        margin-top: 1rem;
+        justify-content: center;
+        border-style: solid;
+        border-width: 0 0 1px 0;
+        border-color: $color-gray-text-lines;
+    }
+
+    .radio-button-container>label {
+        color: #fff;
+        margin-left: 1rem;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+    .switch {
+        font-size: 28px;
+        font-weight: 200;
+        color: #000;
+    }
+
+    .radio-button-container>label>input[type="radio"] {
+        width: 60px;
+        height: 30px;
+    }
+
+    .saveBtn {
+        background-color: #080808;
+        color: #fff;
+        max-width: 50%;
+        width: 10rem;
+        min-width: 20%;
+        border-radius: 3rem;
+        font-weight: bolder;
+        font-size: 18px;
+        border: 1px solid #515257;
+
+    }
+
+    .withdrawalBtn {
+        margin-top: 2rem;
+        width: 80%;
+        font-weight: 600;
+        font-size: 28px;
+        height: 4rem;
+        background-color: $primary-color;
+        border: none;
+        border-radius: 12px;
+        color: #fff;
+    }
+
+    .whyTastrabbitText {
+        width: 80%;
+        font-weight: 600;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .answerWhyTastrabbitText {
+        width: 80%;
+        font-weight: 400;
+        font-size: 24px;
+        text-align: center;
+        opacity: 0.8;
+    }
+
+    .backBtn {
+        font-size: 2rem;
+        color: #fff;
+    }
+
+}
+
+//end withdrawal page
+
+// history page 
+.user-history-section {
+    height: 100%;
+
+    .withdrawal-padding {
+        padding: 2rem 2rem;
+    }
+
+    .withdrawal-history {
+        padding: 0rem 2rem;
+        margin-bottom: 1.5rem;
+
+        .withdrawal-history-parent {
+            display: flex;
+            border-radius: 0.2rem;
+            padding: 1rem;
+            border-bottom: 1px solid $white-color-dd;
+            box-shadow: 0.5rem 0 0.5rem 0 #ecebeb;
+            background: rgb(255, 255, 255);
+
+            .withdrawal-history-child {
+                &:first-child {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 1rem;
+
+                    .withdrawal-icon {
+                        border-radius: 0.3rem;
+                        width: 4rem;
+                        height: 4rem;
+                        background: radial-gradient(circle, rgba(34, 156, 0, 1) 37%, rgba(9, 121, 80, 1) 100%);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        i {
+                            color: $white-color;
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    width: 100%;
+
+                    h3 {
+                        font-size: 1.4rem;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                        color: $color-green-main;
+
+                    }
+                }
+
+                &:last-child {
+                    text-align: end;
+                    display: grid;
+                    place-items: center;
+
+                    h3 {
+                        font-size: 1.5rem;
+                    }
+
+                    h4 {
+                        font-size: 1rem;
+                        color: $color-green-main;
+                    }
+                }
+            }
+        }
+    }
+
+    .backgroundImg {
+        background-color: $primary-color;
+        width: 100%;
+        border-radius: 0 0 50% 50%;
+        position: relative;
+        height: 25rem;
+        padding: 2rem;
+    }
+
+    .historyNavBar {
+        width: 100%;
+        padding: 2rem;
+        background-color: inherit;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navBarBtns {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        background-color: inherit;
+    }
+
+    .navBarBtns>button {
+        padding: 1rem;
+        width: fit-content;
+        background-color: inherit;
+        border: none;
+        font-size: 28px;
+        font-weight: 700;
+        border-radius: 30px;
+        background-color: inherit;
+        color: #fff;
+    }
+
+    .navBarBtns>button:hover {
+        background-color: #fff;
+        color: $primary-color;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 10rem;
+    }
+
+    .card:first-child {
+        margin-top: -8rem;
+    }
+
+    .card {
+        width: 90%;
+        background-color: #fff;
+        height: 20rem;
+        padding: 0;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 2rem;
+    }
+
+    .leftLine {
+        width: 2rem;
+        height: inherit;
+        background-color: $primary-color;
+        margin: 0;
+        border-radius: 20px 0 0 20px;
+    }
+
+    .addAnimation {
+        animation: blinking 0.4s linear infinite reverse;
+    }
+
+    @keyframes blinking {
+        from {
+            background: $primary-color;
+        }
+
+        to {
+            background: red;
+        }
+    }
+
+    .mainDataCard {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .dateCard {
+        display: flex;
+        justify-content: right;
+        width: 100%;
+        font-weight: 500;
+    }
+
+    .infoCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .priceInfo {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2.5rem;
+    }
+
+    .priceInfo>div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 6rem;
+        width: 45%;
+        background-color: #FAFAFA;
+    }
+
+    .priceInfo>div>h3 {
+        font-weight: 200;
+        font-size: 26px;
+    }
+
+    .priceInfo>div>span {
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+}
+
+// end
+
+// setting page
+.user-setting-section {
+    height: 100vh;
+
+    .setting-header {
+        margin-top: 2rem;
+        padding: 2rem;
+    }
+
+    .settingLogoImg {
+        width: 80px;
+        height: 80px;
+        margin-top: 4rem;
+        margin-left: 2rem;
+    }
+
+    .radio-button-words {
+        display: flex;
+        flex-direction: row;
+        margin-top: 2rem;
+        align-items: center;
+        justify-content: left;
+        margin-left: 1rem;
+    }
+
+    .radio-option {
+        margin-right: 10px;
+        margin-left: 1rem;
+        cursor: pointer;
+        color: $white-color-dd;
+        font-size: 26px;
+        font-weight: 700;
+    }
+
+    .radio-option.selected {
+        color: #000;
+        /* Change the color to the desired selected color */
+        background-color: inherit;
+    }
+
+    .smallColumn {
+        width: 4px;
+        height: 1.5rem;
+        background-color: $white-color-dd;
+    }
+
+    .changePasswordForm {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        width: 100%;
+        padding: 1rem 0 1rem 0;
+        gap: 1rem;
+        margin-left: 2rem;
+    }
+
+    .changePasswordForm {
+        div {
+            width: 90%;
+            height: 3.5rem;
+            border-radius: 15px;
+            border: 1px solid;
+            padding-left: 1rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1rem;
+            background-color: #fff;
+            border-color: $primary-color;
+
+            i {
+                font-size: 26px;
+                color: $primary-color;
+            }
+
+            input {
+                width: 90%;
+                height: 100%;
+                background-color: inherit;
+                border: none;
+                font-size: 24px;
+                outline: none;
+            }
+        }
+
+        button {
+            width: 90%;
+            margin-top: 2rem;
+            background-color: $primary-color;
+            border: none;
+            border-radius: 10px;
+            height: 4rem;
+            font-size: 26px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+
+    }
+}
+
+// end
+
+// start journey 
+.start-journey-section {
+    padding-bottom: 10rem;
+    background: $white-color;
+    height: 100vh;
+
+    .backgroundImg {
+        background-color: $primary-color;
+        width: 100%;
+        border-radius: 0 0 50% 50%;
+        position: relative;
+        height: 25rem;
+        padding: 2rem;
+    }
+
+    .start-joueny-header {
+        margin-top: 4rem;
+
+        h1 {
+            color: #fff;
+            font-weight: 800;
+        }
+
+        h4 {
+            color: $white-color-dd;
+            font-weight: 400;
+            margin-top: 1rem;
+        }
+    }
+
+    .journey {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        // background-color: red;
+        height: 20rem;
+        margin-top: 2rem;
+
+        .journey-info {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+
+            div {
+                width: 80%;
+                height: 38%;
+                position: relative;
+                border-radius: 20px;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                display: flex;
+                flex-direction: column;
+                padding-top: 1rem;
+                padding-left: 1rem;
+
+                span {
+                    span {
+                        color: #000;
+                        margin-left: 0.5rem;
+                        font-size: 14px;
+                    }
+
+                    i {
+                        border-radius: 5px;
+                        background-color: #fff;
+
+                        font-size: 12px;
+                        padding: 4px;
+                    }
+                }
+
+                h3 {
+                    color: #000;
+                }
+            }
+
+            .card1 {
+                background-color: #fff;
+                white-space: nowrap !important;
+
+                i {
+                    background-color: #ededed;
+                }
+            }
+
+            .card2 {
+                background-color: #9EB7B1;
+                margin-top: -1.5rem;
+
+            }
+
+            .card3 {
+                background-color: #0A2B14;
+                margin-top: -1.5rem;
+
+                span {
+                    span {
+                        color: #fff;
+                    }
+                }
+
+                h3 {
+                    color: #fff;
+                }
+            }
+        }
+
+        .journeyImg {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+
+            img {
+                max-height: 100%;
+                max-width: 100%;
+                border-radius: 20px;
+            }
+        }
+    }
+
+    button {
+        background-color: transparent;
+        width: 100%;
+        margin-top: 3rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 24px;
+        font-weight: 700;
+
+        &:hover {
+            background: #f8f8f8;
+        }
+
+        img {
+            height: auto;
+            width: 40%;
+        }
+    }
+
+    h3 {
+        text-align: center;
+        margin-top: 0.5rem;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+}
+
+//end start journey 
+
+@media only screen and (max-width: 768px) {
+
+    #chat-widget-container {
+        bottom: 70px !important;
+    }
+
+    .bottom_nav {
+        left: 0;
+        right: 0;
+        width: 100%;
+        min-width: 100%;
+        transform: none;
+    }
+
+    .user-withdrawal-section {
+        .cards {
+            width: 80%;
+        }
+
+        .usdtAmount>span {
+            font-size: 26px;
+        }
+    }
+
+    .bottom_nav .bottom_nav_childs i {
+        font-size: 1.8rem;
+    }
+
+    .head-bar {
+        flex: 1;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    html {
+        font-size: 0.7rem;
+    }
+
+    .credit-score ul li i {
+        font-size: 0.8rem;
+    }
+
+    .bottom_nav .bottom_nav_childs .bottom_nav_logo {
+        width: 6rem;
+        height: 6rem;
+        top: -2.5rem;
+    }
+
+    .home-images-slider>div {
+        min-height: 15rem;
+        min-width: 20rem
+    }
+
+    .home-main-text>h2 {
+        font-size: 2rem;
+    }
+
+    .user-withdrawal-section .withdrawal-page-header>span {
+        font-size: 2rem;
+    }
+
+    .home-secound-text {
+        font-size: 1.6rem;
+    }
+
+    .slide-secound-text {
+        font-size: 1.5rem;
+    }
+
+    .welcome-page-section .welcome-details p {
+        text-align: center;
+        padding: 0rem 1rem;
+    }
+
+    .mobile-auth-section {
+        padding: 2rem 2rem;
+    }
+
+    .user-withdrawal-section .switch {
+        font-size: 1.4rem;
+    }
+
+    .user-withdrawal-section .pageDes>span {
+        font-size: 1.5rem;
+    }
+
+    .welcome-page-section .welcome-logo {
+        height: 15rem;
+    }
+
+    .main-logo-alt {
+        width: 8rem;
+    }
+
+    .profileLogo i {
+        font-size: 14px;
+        padding: 0.5rem;
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .user-history-section {
+        .navBarBtns {
+            flex-wrap: wrap;
+        }
+
+        .navBarBtns>button {
+            font-size: 18px;
+        }
+    }
+
+    .user-withdrawal-section {
+        .usdtAmount>span {
+            font-size: 22px;
+        }
+
+        .withdrawalBtn {
+            margin-top: 5rem;
+            font-size: 24px;
+            height: 3.5rem;
+        }
+
+        .withdrawalLogo {
+            font-size: 26px;
+        }
+
+        .accountBalance {
+            font-size: 22px;
+        }
+
+        .cards {
+            margin-top: -5rem;
+        }
+    }
+
+
+}
+
+@media only screen and (max-width: 350px) {
+
+    html {
+        font-size: 0.6rem;
+    }
+
+    .home-images-slider>div {
+        min-height: 10rem;
+        min-width: 15rem
+    }
+
+    .user-history-section {
+        .historyNavBar {
+            padding: 0;
+        }
+
+        .priceInfo>div {
+            h3 {
+                font-size: 18px;
+            }
+
+            span {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .user-withdrawal-section {
+        .cards {
+            width: 100%;
+            margin-top: -1rem;
+        }
+
+        .withdrawalName>input {
+            width: 100%;
+        }
+
+        .withdrawalName>input::placeholder {
+            color: #000;
+            font-size: 22px;
+            opacity: 0.6;
+        }
+
+        .switch {
+            font-size: 22px;
+        }
+    }
+
+    .journey-info {
+        flex-direction: column;
+    }
+
+    .start-journey-section .journey .journey-info div span span {
+        font-size: 14px;
+        margin-left: 0;
+    }
+
+    .start-journey-section {
+        .journey {
+            .journey-info {
+                div {
+                    padding-left: 0.5rem;
+                    padding-top: 0.5rem;
+                    margin-top: 0rem;
+                }
+            }
+
+        }
+
+        button {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+    }
+}

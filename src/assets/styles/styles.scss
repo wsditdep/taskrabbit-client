@@ -1,0 +1,291 @@
+@import "_variables";
+@import "_mixins";
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+ol,
+a,
+span {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    @include noMarginPadding;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 0.6rem;
+    background: rgb(219, 219, 219);
+}
+
+html::-webkit-scrollbar-track {
+    border-radius: 0.2rem;
+    background: transparent;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+html::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: $primary-color;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+// form::begin
+.auth-heading {
+    h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+}
+
+.auth-subtitle {
+    margin-top: 1.5rem;
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+.auth-backpage {
+    a {
+        color: $white;
+
+        .auth-backpage-inner {
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 50%;
+            background: $secondary-color;
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                background: $primary-color;
+            }
+        }
+    }
+}
+
+.auth-copyright {
+    p {
+        font-size: 1rem;
+        color: #8b8b8b;
+        text-align: center;
+        font-weight: 500;
+    }
+}
+
+
+.form-submit-btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    gap: 1rem;
+
+    button {
+        width: 100%;
+        outline: none;
+        border: none;
+        border-radius: 2rem;
+
+        &:first-child {
+            background: $primary-color;
+            color: $white;
+            font-size: 1rem;
+            padding: 0.8rem 0.6rem;
+            border: 2px solid $primary-color;
+        }
+
+        &:last-child {
+            background: transparent;
+            color: $primary-color;
+            font-size: 1rem;
+            padding: 0.8rem 0.6rem;
+            border: 2px solid $primary-color;
+        }
+
+        &:hover {
+            background: #8e8e8e;
+            border: 2px solid #8e8e8e;
+            color: $white;
+        }
+    }
+}
+
+
+.auth-execution-btns {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem;
+
+    .execution-pass {
+        input {
+            margin-right: 0.5rem;
+        }
+
+        a,
+        span {
+            font-weight: 600;
+            color: $primary-color;
+
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+}
+
+.auth-operation-btns {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.4rem 0;
+
+    .forgot-pass {
+        a {
+            font-weight: 500;
+            color: $primary-color;
+
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+}
+
+.global-form {
+    .form-groups {
+        label {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 1.2rem 0 0.4rem 0;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.6rem 2rem;
+            outline: none;
+            border: 1px solid #bdbdbd;
+            border-radius: 2rem;
+
+            &:focus {
+                border: 1px solid $primary-color;
+            }
+        }
+    }
+}
+
+.form-back-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    a {
+        color: $white-d;
+        font-size: 1.2rem;
+
+        i {
+            margin-right: 0.4rem;
+        }
+    }
+}
+
+// form::end
+
+// auth::begin
+.flex-director-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.auth-login-bg {
+    background: linear-gradient(#0611218a, #061121), url("../images/vectors/vec1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-position: left;
+}
+
+@keyframes animateAuthPage {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0rem);
+        transform: scale(1);
+    }
+}
+
+.auth-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+
+    .auth-logo-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+
+        img {
+            height: auto;
+            width: 12rem;
+        }
+    }
+
+    .auth-wrapper {
+        background: $white;
+        width: 40rem;
+        border-radius: 0.4rem;
+        box-shadow: $box-shodow-light;
+        position: relative;
+        z-index: 12;
+        @include glassMorphicDesign;
+        animation: animateAuthPage 0.2s linear forwards;
+
+        .auth-info {
+            padding: 2rem;
+        }
+    }
+}
+
+// auth::end
