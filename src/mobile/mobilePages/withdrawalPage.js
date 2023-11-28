@@ -8,6 +8,7 @@ import { useAlert } from "react-alert";
 import { clearError, getUserWallet, resetNew, saveWalletAddress } from "../../states/actions/walletAction";
 import Loader from "../../components/loader/Loader";
 import { withdrawal, clearError as reqWithdrawalError } from "../../states/actions/withdrawalAction";
+import axios from "axios";
 
 
 const UserWithdrawal = () => {
@@ -21,15 +22,39 @@ const UserWithdrawal = () => {
     const [isWallet, setIsWallet] = useState(JSON.parse(localStorage.getItem("walletAddress")) || "null");
     const { loading, error } = useSelector(state => state.userWithdrawal);
 
-    console.log(userWallet)
+    const [fetchingUser, setFetchingUser] = useState(false)
+    const [userData, setUserData] = useState(null)
+
 
     const handleOptionChange = (event) => {
         setSelectedOption(event.target.value);
     };
 
+    useEffect(() => {
+        const fetchUser = async () => {
+            try {
+                setFetchingUser(true)
+                const config = {
+                    headers: {
+                        "Content-Type": "application/json",
+                    }
+                };
+                const userInfo = await axios.get("http://localhost:5000/api/get-user-info", config, axios.defaults.withCredentials = true)
+                setUserData(userInfo.data)
+                setFetchingUser(false)
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                setFetchingUser(false)
+            }
+        }
+
+        fetchUser()
+    }, [])
+
+
     const [selectedOption, setSelectedOption] = useState(isWallet?.type) || "TRC20";
     const [userVal, setUserVal] = useState({
-        address: isWallet?.address || "",
+        address: userData?.user?.walletAddress || "",
         name: user.username || "",
         withdrawalAmount: "",
         withdrawalPin: ""
@@ -69,10 +94,9 @@ const UserWithdrawal = () => {
             alert.success(message);
             navigate("/userDashboard/withdrawal");
             dispatch(resetNew());
-
             localStorage.setItem("walletAddress", JSON.stringify({
                 user: user.username,
-                address: userVal.address,
+                address: userData?.user?.walletAddress,
                 name: userVal.name,
                 type: selectedOption,
                 isWalletAddress: true
@@ -91,8 +115,8 @@ const UserWithdrawal = () => {
     }, [dispatch, navigate, alert, saveWalletError, success, message, error]);
     return (
         <>
-            {loadUserLoading || saveWalletLoading || walletLoading || loading ? <Loader /> : <></>}
-            <section className="user-withdrawal-section">
+            { loadUserLoading || saveWalletLoading || walletLoading || loading ? <Loader /> : <></>}
+            {!fetchingUser && <section className="user-withdrawal-section">
                 <div className="backgroundImg">
                     <div className="withdrawal-page-header">
                         <Link to={`/userDashboard/userProfile`} className="backBtn">
@@ -136,7 +160,7 @@ const UserWithdrawal = () => {
                         <input
                             placeholder="WALLET ADDRESS"
                             name="address"
-                            value={userVal.address}
+                            value={userData?.user?.walletAddress}
                             onChange={(e) => onChangeHandler(e)}
                         />
                     </div>
@@ -212,7 +236,7 @@ const UserWithdrawal = () => {
                         Now you are assigning job to Taskrabbit Pro from all around the world cryptocurrency is the fastest and stable way to get paid oversea
                     </span>
                 </div>
-            </section>
+            </section>}
             <BottomNav />
         </>
     )
